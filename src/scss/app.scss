@@ -1,0 +1,65 @@
+body {
+}
+
+.wrapper {
+   .header {
+      &__container {
+         .header__up {
+            .up__menu {
+            }
+            .up__back-button {
+            }
+            .up__selector {
+               .selector__item {
+               }
+            }
+         }
+         .header__down {
+            .down__header-menu {
+               .down__project-name {
+               }
+               .down__chek-mark {
+               }
+            }
+            .down__name-content {
+            }
+         }
+      }
+   }
+   .content {
+      &__left-menu {
+         .left-menu__item {
+            .item__icon {
+            }
+            .item__title {
+            }
+         }
+      }
+      &__main-section {
+         .main-section__title-lists {
+         }
+         .main-section__level {
+            .level__one {
+            }
+            .level__two {
+            }
+            .level__document-first {
+            }
+            .level__document-second {
+            }
+         }
+         .main-section__item-list {
+            .item-list__name-works {
+            }
+            .item-list__basic-salary {
+            }
+            .item-list__equipment {
+            }
+            .item-list__overheads {
+            }
+            .item-list__estimated-profit {
+            }
+         }
+      }
+   }
+}
