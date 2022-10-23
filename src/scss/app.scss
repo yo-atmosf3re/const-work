@@ -1,33 +1,106 @@
+@import url("http://fonts.cdnfonts.com/css/roboto");
+
 body {
+   margin: 0;
+   padding: 0;
+   background-color: #27272a;
+   color: white;
+   font-family: "Roboto";
 }
 
 .wrapper {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 66px 992px;
+   gap: 0px 0px;
+   grid-template-areas:
+      "header header header"
+      "content content content";
    .header {
+      grid-area: header;
       &__container {
          .header__up {
-            .up__menu {
-            }
-            .up__back-button {
-            }
-            .up__selector {
-               .selector__item {
+            border-bottom: 1px solid #414144;
+            .up__container {
+               display: flex;
+               justify-content: flex-start;
+               max-width: 98%;
+               margin: 0 30px;
+               .up__menu {
+                  align-self: center;
+                  margin-right: 27px;
+               }
+               .up__back-button {
+                  align-self: center;
+               }
+               .up__selector {
+                  display: flex;
+                  .selector__item {
+                     padding-bottom: 14px;
+                     border-bottom: 2px solid white;
+                     margin-left: 28px;
+                     margin-top: 12px;
+                  }
                }
             }
          }
          .header__down {
+            display: flex;
+            align-items: center;
+
             .down__header-menu {
+               border-right: 1px solid #414144;
+               border-bottom: 1px solid #414144;
+               width: 234px;
+               height: 43px;
+               margin: 0px 13px 8px 20px;
+               padding-top: 8px;
+               display: flex;
                .down__project-name {
+                  font-style: normal;
+                  font-weight: 400;
+                  color: #a1a1aa;
+                  display: flex;
+                  flex-direction: column;
+                  .project-name__title {
+                     font-size: 14px;
+                     line-height: 16px;
+                  }
+                  .project-name__abbreviation {
+                     font-size: 10px;
+                     line-height: 12px;
+                  }
                }
                .down__chek-mark {
+                  position: relative;
+                  left: 90px;
+                  top: 4.5px;
                }
             }
             .down__name-content {
+               border-bottom: 1px solid #414144;
+               font-style: normal;
+               font-weight: 400;
+               font-size: 18px;
+               line-height: 21px;
+               // padding-left: 15px;
+               height: 43px;
             }
          }
       }
    }
    .content {
+      display: grid;
+      grid-template-columns: 234px 1.2fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 0px 0px;
+      grid-template-areas:
+         "sidebar main"
+         "sidebar main"
+         "sidebar main";
+      grid-area: content;
       &__left-menu {
+         grid-area: sidebar;
          .left-menu__item {
             .item__icon {
             }
@@ -36,9 +109,19 @@ body {
          }
       }
       &__main-section {
+         display: grid;
+         grid-template-columns: 120px 1.5fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr;
+         gap: 0px 0px;
+         grid-template-areas:
+            "level description description"
+            "level description description"
+            "level description description";
+         grid-area: main;
          .main-section__title-lists {
          }
          .main-section__level {
+            grid-area: level;
             .level__one {
             }
             .level__two {
@@ -49,6 +132,17 @@ body {
             }
          }
          .main-section__item-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px 60px 60px 60px 60px;
+            gap: 0px 0px;
+            grid-template-areas:
+               "."
+               "."
+               "."
+               "."
+               ".";
+            grid-area: description;
             .item-list__name-works {
             }
             .item-list__basic-salary {
