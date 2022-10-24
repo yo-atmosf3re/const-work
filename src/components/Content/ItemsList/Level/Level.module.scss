@@ -3,17 +3,48 @@
    & div:last-child {
       border: none;
    }
+
    .level__one {
       min-height: 60px;
       border-bottom: 1px solid #414144;
       position: relative;
-      svg:first-child {
+
+      &:hover {
+         background-color: #414144;
+         display: flex;
+         // flex-direction: column;
+         svg:nth-child(3) {
+            display: block;
+            position: absolute;
+            top: 22px;
+         }
+         svg:nth-child(4) {
+            display: block;
+            position: absolute;
+            top: 21.5px;
+         }
+         svg:nth-child(5) {
+            display: block;
+            position: absolute;
+            top: 10px;
+         }
+      }
+      svg:nth-child(1) {
          padding: 22px 0 0px 15px;
       }
-      svg:last-child {
+      svg:nth-child(2) {
          position: absolute;
          top: 38px;
          left: 22.5px;
+      }
+      svg:nth-child(3) {
+         display: none;
+      }
+      svg:nth-child(4) {
+         display: none;
+      }
+      svg:nth-child(5) {
+         display: none;
       }
    }
    .level__two {
