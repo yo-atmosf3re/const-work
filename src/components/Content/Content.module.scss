@@ -1,0 +1,217 @@
+.content {
+   display: grid;
+   grid-template-columns: 234px 1.2fr;
+   grid-template-rows: 1fr;
+   grid-template-areas:
+      "sidebar main"
+      "sidebar main"
+      "sidebar main";
+   grid-area: content;
+   &__left-menu {
+      grid-area: sidebar;
+      padding-top: 42px;
+      border-right: 1px solid #414144;
+      width: 260px;
+      min-height: 100vh;
+      .left-menu__item {
+         display: flex;
+         column-gap: 16.75px;
+         height: 32px;
+         margin: 0 0 0 22.75px;
+         .item__icon {
+            justify-self: center;
+            align-self: center;
+         }
+         .item__title {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            justify-self: center;
+            align-self: center;
+         }
+      }
+   }
+   &__main-section {
+      margin: 33.5px 0 0 27px;
+      padding: 0 0 0 10px;
+      background-color: #202124;
+      min-width: 1920px;
+      max-width: 100%;
+      min-height: 100vh;
+      .main-section__title-lists {
+         font-size: 14px;
+         line-height: 130%;
+         display: flex;
+         color: #a1a1aa;
+         min-height: 42px;
+         max-width: 100%;
+         border-bottom: 1px solid #414144;
+         .title-list__level {
+            min-width: 120px;
+            padding: 11px 0px 12px 8px;
+         }
+         .title-list__name-work {
+            min-width: 757px;
+            padding: 11px 0px 12px 0px;
+         }
+         .title-list__basic-salary {
+            min-width: 200px;
+            padding: 11px 0px 12px 0px;
+         }
+         .title-list__eqipment {
+            min-width: 200px;
+            padding: 11px 0px 12px 0px;
+         }
+         .title-list__overheads {
+            min-width: 200px;
+            padding: 11px 0px 12px 0px;
+         }
+         .title-list__estimated-profit {
+            padding: 11px 0px 12px 0px;
+         }
+      }
+      .main-section__items-list {
+         display: flex;
+         font-size: 14px;
+         line-height: 130%;
+         .item-list__level {
+            min-width: 120px;
+            & div:last-child {
+               border: none;
+            }
+            .level__one {
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               position: relative;
+               svg:first-child {
+                  padding: 22px 0 0px 15px;
+               }
+               svg:last-child {
+                  position: absolute;
+                  top: 38px;
+                  left: 22.5px;
+               }
+            }
+            .level__two {
+               min-height: 61px;
+               border-bottom: 0.1px solid #414144;
+               position: relative;
+               svg:nth-child(1) {
+                  padding: 22px 0 0px 35px;
+               }
+               svg:nth-child(2) {
+                  position: absolute;
+                  top: 29px;
+                  left: 23.6px;
+               }
+               svg:nth-child(3) {
+                  position: absolute;
+                  z-index: 40;
+                  top: 38px;
+                  left: 43px;
+               }
+            }
+            .level__document-first {
+               position: relative;
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               svg:nth-child(1) {
+                  padding: 22px 0 0px 56px;
+               }
+               svg:nth-child(2) {
+                  position: absolute;
+                  top: 29px;
+                  left: 44px;
+               }
+            }
+            .level__document-second {
+               position: relative;
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               svg {
+                  padding: 22px 0 0px 56px;
+               }
+               svg:nth-child(2) {
+                  position: absolute;
+                  top: 6.4px;
+                  right: 65px;
+               }
+            }
+         }
+         .item-list__name-works {
+            min-width: 757px;
+            .name-works__item {
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               span {
+                  padding: 21px 0 21px 10px;
+                  display: inline-block;
+               }
+               &:last-child {
+                  border: none;
+               }
+            }
+         }
+         .item-list__basic-salary {
+            min-width: 200px;
+            .basic-salary__item {
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               span {
+                  display: inline-block;
+                  padding: 21px 0 21px 10px;
+               }
+               &:last-child {
+                  border: none;
+               }
+            }
+         }
+         .item-list__equipment {
+            min-width: 200px;
+            .equipment__item {
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               span {
+                  display: inline-block;
+                  padding: 21px 0 21px 10px;
+               }
+               &:last-child {
+                  border: none;
+               }
+            }
+         }
+         .item-list__overheads {
+            min-width: 200px;
+            .overheads__item {
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               span {
+                  display: inline-block;
+                  padding: 21px 0 21px 10px;
+               }
+               &:last-child {
+                  border: none;
+               }
+            }
+         }
+         .item-list__estimated-profit {
+            min-width: 441px;
+            @media (min-width: 2190px) {
+               min-width: 34.7%;
+            }
+            .estimated-profit__item {
+               min-height: 60px;
+               border-bottom: 1px solid #414144;
+               span {
+                  display: inline-block;
+                  padding: 21px 0 21px 10px;
+               }
+               &:last-child {
+                  border: none;
+               }
+            }
+         }
+      }
+   }
+}
