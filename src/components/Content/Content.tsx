@@ -1,14 +1,22 @@
 import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Layout from '../../page/Layout'
 import ItemsList from './ItemsList/ItemsList'
 import Sidebar from './Sidebar/Sidebar'
 
-
-
-
-
 const Content = () => {
    return (
-      <div className="content">
+      <Routes>
+         <Route path='*' element={<Layout />}>
+            <Route path='*' element={<ItemsList />} />
+         </Route>
+      </Routes>
+   )
+}
+
+export default Content
+
+{/* <div className="content">
          <Sidebar />
          <div className="content__main-section">
             <div className="main-section__title-lists">
@@ -21,8 +29,4 @@ const Content = () => {
             </div>
             <ItemsList />
          </div>
-      </div>
-   )
-}
-
-export default Content
+      </div> */}

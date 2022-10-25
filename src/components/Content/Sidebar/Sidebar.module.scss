@@ -1,14 +1,15 @@
 .content__left-menu {
    grid-area: sidebar;
-   padding-top: 42px;
+   padding-top: 31px;
    border-right: 1px solid #414144;
    width: 260px;
    min-height: 100vh;
+
    .left-menu__item {
       display: flex;
-      column-gap: 16.75px;
       height: 32px;
-      margin: 0 0 0 22.75px;
+      margin: 0;
+      padding: 0 0 0 22.75px;
       .item__icon {
          justify-self: center;
          align-self: center;
