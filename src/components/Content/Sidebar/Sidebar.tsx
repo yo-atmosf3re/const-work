@@ -29,9 +29,7 @@ const BackgroundColorNew = {
 
 const Sidebar = () => {
    const [selected, setSelected] = useState(0)
-   const onClickSwitchActive = (i: number) => {
-      setSelected(i)
-   }
+   const onClickSwitchActive = (i: number) => setSelected(i)
    return (
       <div className="content__left-menu">
          {

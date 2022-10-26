@@ -1,3 +1,4 @@
+@import "../../scss/variables";
 .content {
    display: grid;
    grid-template-columns: 234px 1.2fr;
@@ -33,10 +34,10 @@
       }
    }
    &__main-section {
-      margin: 33.5px 0 0 27px;
+      margin: 29px 0 0 27px;
       padding: 0 0 0 10px;
       background-color: #202124;
-      min-width: 1920px;
+      width: 89vw;
       max-width: 100%;
       min-height: 100vh;
       .main-section__title-lists {
@@ -47,170 +48,20 @@
          min-height: 42px;
          max-width: 100%;
          border-bottom: 1px solid #414144;
-         .title-list__level {
+         div:nth-child(1) {
             min-width: 120px;
             padding: 11px 0px 12px 8px;
          }
-         .title-list__name-work {
+         div:nth-child(2) {
             min-width: 757px;
-            padding: 11px 0px 12px 0px;
          }
-         .title-list__basic-salary {
-            min-width: 200px;
-            padding: 11px 0px 12px 0px;
+         div:nth-child(3),
+         div:nth-child(4),
+         div:nth-child(5) {
+            min-width: $widthOfTitleListItems;
          }
-         .title-list__eqipment {
-            min-width: 200px;
-            padding: 11px 0px 12px 0px;
-         }
-         .title-list__overheads {
-            min-width: 200px;
-            padding: 11px 0px 12px 0px;
-         }
-         .title-list__estimated-profit {
-            padding: 11px 0px 12px 0px;
-         }
-      }
-      .main-section__items-list {
-         display: flex;
-         font-size: 14px;
-         line-height: 130%;
-         .item-list__level {
-            min-width: 120px;
-            & div:last-child {
-               border: none;
-            }
-            .level__one {
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               position: relative;
-               svg:first-child {
-                  padding: 22px 0 0px 15px;
-               }
-               svg:last-child {
-                  position: absolute;
-                  top: 38px;
-                  left: 22.5px;
-               }
-            }
-            .level__two {
-               min-height: 61px;
-               border-bottom: 0.1px solid #414144;
-               position: relative;
-               svg:nth-child(1) {
-                  padding: 22px 0 0px 35px;
-               }
-               svg:nth-child(2) {
-                  position: absolute;
-                  top: 29px;
-                  left: 23.6px;
-               }
-               svg:nth-child(3) {
-                  position: absolute;
-                  z-index: 40;
-                  top: 38px;
-                  left: 43px;
-               }
-            }
-            .level__document-first {
-               position: relative;
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               svg:nth-child(1) {
-                  padding: 22px 0 0px 56px;
-               }
-               svg:nth-child(2) {
-                  position: absolute;
-                  top: 29px;
-                  left: 44px;
-               }
-            }
-            .level__document-second {
-               position: relative;
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               svg {
-                  padding: 22px 0 0px 56px;
-               }
-               svg:nth-child(2) {
-                  position: absolute;
-                  top: 6.4px;
-                  right: 65px;
-               }
-            }
-         }
-         .item-list__name-works {
-            min-width: 757px;
-            .name-works__item {
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               span {
-                  padding: 21px 0 21px 10px;
-                  display: inline-block;
-               }
-               &:last-child {
-                  border: none;
-               }
-            }
-         }
-         .item-list__basic-salary {
-            min-width: 200px;
-            .basic-salary__item {
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               span {
-                  display: inline-block;
-                  padding: 21px 0 21px 10px;
-               }
-               &:last-child {
-                  border: none;
-               }
-            }
-         }
-         .item-list__equipment {
-            min-width: 200px;
-            .equipment__item {
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               span {
-                  display: inline-block;
-                  padding: 21px 0 21px 10px;
-               }
-               &:last-child {
-                  border: none;
-               }
-            }
-         }
-         .item-list__overheads {
-            min-width: 200px;
-            .overheads__item {
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               span {
-                  display: inline-block;
-                  padding: 21px 0 21px 10px;
-               }
-               &:last-child {
-                  border: none;
-               }
-            }
-         }
-         .item-list__estimated-profit {
-            min-width: 441px;
-            @media (min-width: 2190px) {
-               min-width: 34.7%;
-            }
-            .estimated-profit__item {
-               min-height: 60px;
-               border-bottom: 1px solid #414144;
-               span {
-                  display: inline-block;
-                  padding: 21px 0 21px 10px;
-               }
-               &:last-child {
-                  border: none;
-               }
-            }
+         .title-list__item {
+            padding: $paddingInTitleList;
          }
       }
    }

@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { v4 as uuidv4 } from 'uuid'
 
 const SelectorFromHeader = [
-   'Просмотр',
-   'Управление',
+   { id: 1, title: 'Просмотр', },
+   { id: 2, title: 'Управление', },
 ]
 
 const Header = () => {
+   const [selected, setSelected] = useState(0);
+   const onClickSwitchSelected = (i: number) => setSelected(i)
    return (
       <header className="header">
          <div className="header__container">
@@ -24,8 +27,11 @@ const Header = () => {
                   <div className="up__selector">
                      {
                         SelectorFromHeader.map(s =>
-                           <div className="selector__item">
-                              {s}
+                           <div
+                              style={selected === s.id ? { borderBottom: '2px solid white' } : { borderBottom: 'none' }}
+                              onClick={() => { onClickSwitchSelected(s.id) }}
+                              key={uuidv4()} className="selector__item">
+                              {s.title}
                            </div>)
                      }
                   </div>

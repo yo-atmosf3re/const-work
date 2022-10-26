@@ -1,30 +1,52 @@
+@import "../../../../scss/variables";
+
 .item-list__level {
    min-width: 120px;
    & div:last-child {
       border: none;
    }
-
    .level__one {
       min-height: 60px;
-      border-bottom: 1px solid #414144;
+      border-bottom: 1px solid $colorOfBorder;
       position: relative;
-
+      .one__container {
+         display: none;
+      }
       &:hover {
-         background-color: #414144;
+         svg:nth-child(1) {
+            position: absolute;
+            z-index: 10;
+         }
+         div {
+            display: block;
+            position: absolute;
+            width: 107px;
+            height: 28px;
+            background-color: $colorOfBorder;
+            top: 16px;
+            left: 10px;
+            border-radius: 6px;
+         }
          svg:nth-child(3) {
             display: block;
             position: absolute;
             top: 22px;
+            left: 45px;
+            z-index: 10;
          }
          svg:nth-child(4) {
             display: block;
             position: absolute;
             top: 21.5px;
+            left: 73px;
+            z-index: 10;
          }
          svg:nth-child(5) {
             display: block;
             position: absolute;
-            top: 10px;
+            top: 22px;
+            left: 96px;
+            z-index: 10;
          }
       }
       svg:nth-child(1) {
@@ -46,9 +68,34 @@
       }
    }
    .level__two {
-      min-height: 61px;
-      border-bottom: 0.1px solid #414144;
+      min-height: 60px;
+      border-bottom: 1px solid $colorOfBorder;
       position: relative;
+      .two__container {
+         display: none;
+      }
+      &:hover {
+         svg:nth-child(1) {
+            z-index: 10;
+         }
+         div {
+            display: block;
+            position: absolute;
+            width: 107px;
+            height: 28px;
+            background-color: $colorOfBorder;
+            top: 16px;
+            left: 10px;
+            border-radius: 6px;
+            z-index: 9;
+         }
+         svg:nth-child(4) {
+            z-index: 10;
+         }
+         svg:nth-child(5) {
+            z-index: 10;
+         }
+      }
       svg:nth-child(1) {
          padding: 22px 0 0px 35px;
       }
@@ -59,7 +106,6 @@
       }
       svg:nth-child(3) {
          position: absolute;
-         z-index: 40;
          top: 38px;
          left: 43px;
       }
@@ -67,7 +113,7 @@
    .level__document-first {
       position: relative;
       min-height: 60px;
-      border-bottom: 1px solid #414144;
+      border-bottom: 1px solid $colorOfBorder;
       svg:nth-child(1) {
          padding: 22px 0 0px 56px;
       }
@@ -80,7 +126,7 @@
    .level__document-second {
       position: relative;
       min-height: 60px;
-      border-bottom: 1px solid #414144;
+      border-bottom: 1px solid $colorOfBorder;
       svg {
          padding: 22px 0 0px 56px;
       }
